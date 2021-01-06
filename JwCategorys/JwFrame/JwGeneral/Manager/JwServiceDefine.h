@@ -11,11 +11,13 @@
 #define JwServiceDefine_h
 
 //默认路径
-#define kServiceBaseURL @"https://tapi-sip.510gow.com/"
+#define kServiceBaseURL @"http://api.szyoutui.com/"
 //默认节点
-#define kServiceBasePoint @"interface?action="
+#define kServiceBasePoint @"api/app/"
 //混淆参数
 #define kServiceBlur @"com.chenjingwei0124"
+
+
 //appKey
 #define kServiceAppKey @"5fb39a50c59a9"
 //appSecret
@@ -23,7 +25,7 @@
 
 
 typedef NS_ENUM(NSUInteger, Jw_HttpCode) {
-    kHttpCodeSuccess = 0,//成功
+    kHttpCodeSuccess = 1,//成功
 };
 
 

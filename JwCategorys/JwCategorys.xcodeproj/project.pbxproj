@@ -41,12 +41,8 @@
 		C8517B4025A43BD500B6BC66 /* JwRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8517B3725A43BD500B6BC66 /* JwRootViewController.m */; };
 		C8517B4125A43BD500B6BC66 /* JwBaseBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8517B3A25A43BD500B6BC66 /* JwBaseBackController.m */; };
 		C8517B4325A43BD500B6BC66 /* JwBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8517B3C25A43BD500B6BC66 /* JwBaseViewController.m */; };
-		C8517B4925A43DCC00B6BC66 /* JwHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8517B4825A43DCC00B6BC66 /* JwHomeController.m */; };
 		C8517B4E25A43FE500B6BC66 /* JwBase.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8517B4D25A43FE500B6BC66 /* JwBase.xcassets */; };
 		C86BE13725884B6B00D3AA3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C86BE13625884B6B00D3AA3E /* AppDelegate.m */; };
-		C86BE13A25884B6B00D3AA3E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C86BE13925884B6B00D3AA3E /* SceneDelegate.m */; };
-		C86BE13D25884B6B00D3AA3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86BE13C25884B6B00D3AA3E /* ViewController.m */; };
-		C86BE14025884B6B00D3AA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86BE13E25884B6B00D3AA3E /* Main.storyboard */; };
 		C86BE14225884B6E00D3AA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86BE14125884B6E00D3AA3E /* Assets.xcassets */; };
 		C86BE14525884B6E00D3AA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86BE14325884B6E00D3AA3E /* LaunchScreen.storyboard */; };
 		C86BE14825884B6E00D3AA3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C86BE14725884B6E00D3AA3E /* main.m */; };
@@ -62,6 +58,10 @@
 		C87056CD259B0FCD00099D79 /* UIView+JwGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = C87056CC259B0FCD00099D79 /* UIView+JwGradient.m */; };
 		C87056D1259B106200099D79 /* UIView+JwHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = C87056D0259B106200099D79 /* UIView+JwHolder.m */; };
 		C87056D5259B116200099D79 /* UIView+JwNib.m in Sources */ = {isa = PBXBuildFile; fileRef = C87056D4259B116200099D79 /* UIView+JwNib.m */; };
+		C8B603D225A46E800015F4E5 /* JwClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B603CB25A46E800015F4E5 /* JwClassifyModel.m */; };
+		C8B603D325A46E800015F4E5 /* JwHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B603CD25A46E800015F4E5 /* JwHomeController.m */; };
+		C8B603D425A46E800015F4E5 /* JwClassifyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B603D025A46E800015F4E5 /* JwClassifyCell.m */; };
+		C8B603DB25A46F090015F4E5 /* JwDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B603D925A46F090015F4E5 /* JwDataService.m */; };
 		C8C975C2259B140B000AC2FE /* UIViewController+JwCate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C975C1259B140B000AC2FE /* UIViewController+JwCate.m */; };
 		C8C975C8259B2A67000AC2FE /* JwCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C975C7259B2A67000AC2FE /* JwCustomLayer.m */; };
 		C8C975CC259B2A85000AC2FE /* JwCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C975CB259B2A85000AC2FE /* JwCommon.m */; };
@@ -151,17 +151,10 @@
 		C8517B3925A43BD500B6BC66 /* JwBaseMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwBaseMenuController.h; sourceTree = "<group>"; };
 		C8517B3A25A43BD500B6BC66 /* JwBaseBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseBackController.m; sourceTree = "<group>"; };
 		C8517B3C25A43BD500B6BC66 /* JwBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwBaseViewController.m; sourceTree = "<group>"; };
-		C8517B4725A43DCC00B6BC66 /* JwHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwHomeController.h; sourceTree = "<group>"; };
-		C8517B4825A43DCC00B6BC66 /* JwHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JwHomeController.m; sourceTree = "<group>"; };
 		C8517B4D25A43FE500B6BC66 /* JwBase.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JwBase.xcassets; sourceTree = "<group>"; };
 		C86BE13225884B6B00D3AA3E /* JwCategorys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JwCategorys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86BE13525884B6B00D3AA3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C86BE13625884B6B00D3AA3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C86BE13825884B6B00D3AA3E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		C86BE13925884B6B00D3AA3E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		C86BE13B25884B6B00D3AA3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C86BE13C25884B6B00D3AA3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C86BE13F25884B6B00D3AA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C86BE14125884B6E00D3AA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C86BE14425884B6E00D3AA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C86BE14625884B6E00D3AA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +184,14 @@
 		C87056D0259B106200099D79 /* UIView+JwHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JwHolder.m"; sourceTree = "<group>"; };
 		C87056D3259B116200099D79 /* UIView+JwNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JwNib.h"; sourceTree = "<group>"; };
 		C87056D4259B116200099D79 /* UIView+JwNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JwNib.m"; sourceTree = "<group>"; };
+		C8B603CA25A46E800015F4E5 /* JwClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwClassifyModel.h; sourceTree = "<group>"; };
+		C8B603CB25A46E800015F4E5 /* JwClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwClassifyModel.m; sourceTree = "<group>"; };
+		C8B603CD25A46E800015F4E5 /* JwHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwHomeController.m; sourceTree = "<group>"; };
+		C8B603CE25A46E800015F4E5 /* JwHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwHomeController.h; sourceTree = "<group>"; };
+		C8B603D025A46E800015F4E5 /* JwClassifyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwClassifyCell.m; sourceTree = "<group>"; };
+		C8B603D125A46E800015F4E5 /* JwClassifyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwClassifyCell.h; sourceTree = "<group>"; };
+		C8B603D925A46F090015F4E5 /* JwDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwDataService.m; sourceTree = "<group>"; };
+		C8B603DA25A46F090015F4E5 /* JwDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JwDataService.h; sourceTree = "<group>"; };
 		C8C975C0259B140B000AC2FE /* UIViewController+JwCate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JwCate.h"; sourceTree = "<group>"; };
 		C8C975C1259B140B000AC2FE /* UIViewController+JwCate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JwCate.m"; sourceTree = "<group>"; };
 		C8C975C6259B2A67000AC2FE /* JwCustomLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JwCustomLayer.h; sourceTree = "<group>"; };
@@ -376,6 +377,7 @@
 		C8517AF625A4323D00B6BC66 /* JwGeneral */ = {
 			isa = PBXGroup;
 			children = (
+				C8B603D825A46F090015F4E5 /* Service */,
 				C8517AF725A4326300B6BC66 /* Localize */,
 				C8517AFC25A4376D00B6BC66 /* Manager */,
 			);
@@ -476,8 +478,7 @@
 		C8517B4B25A43DDB00B6BC66 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				C8517B4725A43DCC00B6BC66 /* JwHomeController.h */,
-				C8517B4825A43DCC00B6BC66 /* JwHomeController.m */,
+				C8B603C825A46E800015F4E5 /* 首页 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -507,11 +508,6 @@
 			children = (
 				C86BE13525884B6B00D3AA3E /* AppDelegate.h */,
 				C86BE13625884B6B00D3AA3E /* AppDelegate.m */,
-				C86BE13825884B6B00D3AA3E /* SceneDelegate.h */,
-				C86BE13925884B6B00D3AA3E /* SceneDelegate.m */,
-				C86BE13B25884B6B00D3AA3E /* ViewController.h */,
-				C86BE13C25884B6B00D3AA3E /* ViewController.m */,
-				C86BE13E25884B6B00D3AA3E /* Main.storyboard */,
 				C86BE14125884B6E00D3AA3E /* Assets.xcassets */,
 				C86BE14325884B6E00D3AA3E /* LaunchScreen.storyboard */,
 				C86BE14625884B6E00D3AA3E /* Info.plist */,
@@ -584,6 +580,52 @@
 				C8517AAE259DA8EB00B6BC66 /* JwVendor */,
 			);
 			path = JwFrame;
+			sourceTree = "<group>";
+		};
+		C8B603C825A46E800015F4E5 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				C8B603C925A46E800015F4E5 /* M */,
+				C8B603CC25A46E800015F4E5 /* C */,
+				C8B603CF25A46E800015F4E5 /* V */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		C8B603C925A46E800015F4E5 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				C8B603CA25A46E800015F4E5 /* JwClassifyModel.h */,
+				C8B603CB25A46E800015F4E5 /* JwClassifyModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		C8B603CC25A46E800015F4E5 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				C8B603CE25A46E800015F4E5 /* JwHomeController.h */,
+				C8B603CD25A46E800015F4E5 /* JwHomeController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		C8B603CF25A46E800015F4E5 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				C8B603D125A46E800015F4E5 /* JwClassifyCell.h */,
+				C8B603D025A46E800015F4E5 /* JwClassifyCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		C8B603D825A46F090015F4E5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C8B603DA25A46F090015F4E5 /* JwDataService.h */,
+				C8B603D925A46F090015F4E5 /* JwDataService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C8C975C5259B2A38000AC2FE /* JwExten */ = {
@@ -670,7 +712,6 @@
 				C870569C2599C51A00099D79 /* JwCate.xcassets in Resources */,
 				C8517B4E25A43FE500B6BC66 /* JwBase.xcassets in Resources */,
 				C86BE14225884B6E00D3AA3E /* Assets.xcassets in Resources */,
-				C86BE14025884B6B00D3AA3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,7 +764,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C86BE13D25884B6B00D3AA3E /* ViewController.m in Sources */,
 				C8C975CC259B2A85000AC2FE /* JwCommon.m in Sources */,
 				C8517AD2259DB43200B6BC66 /* JwLocationHelper.m in Sources */,
 				C8C975C8259B2A67000AC2FE /* JwCustomLayer.m in Sources */,
@@ -739,6 +779,7 @@
 				C86BE13725884B6B00D3AA3E /* AppDelegate.m in Sources */,
 				C8CD0D2F25949ABC00A0D3D0 /* UIBarButtonItem+JwCate.m in Sources */,
 				C86BE14825884B6E00D3AA3E /* main.m in Sources */,
+				C8B603D425A46E800015F4E5 /* JwClassifyCell.m in Sources */,
 				C8517B2625A43B5000B6BC66 /* JwBaseCollectionCell.m in Sources */,
 				C8517B3E25A43BD500B6BC66 /* JwBaseMenuController.m in Sources */,
 				C87056972599C3BD00099D79 /* UIImageView+JwCate.m in Sources */,
@@ -750,7 +791,6 @@
 				C8C975D1259B2B99000AC2FE /* NSData+JwCate.m in Sources */,
 				C8C975C2259B140B000AC2FE /* UIViewController+JwCate.m in Sources */,
 				C8CD0CF52593215000A0D3D0 /* NSString+JwCate.m in Sources */,
-				C8517B4925A43DCC00B6BC66 /* JwHomeController.m in Sources */,
 				C8517B1625A439AE00B6BC66 /* JwBaseProjectModel.m in Sources */,
 				C8517B0625A4376D00B6BC66 /* JwHttpHelper.m in Sources */,
 				C8517B0525A4376D00B6BC66 /* JwBaseService.m in Sources */,
@@ -770,6 +810,7 @@
 				C8517B4325A43BD500B6BC66 /* JwBaseViewController.m in Sources */,
 				C87056D1259B106200099D79 /* UIView+JwHolder.m in Sources */,
 				C87056982599C3BD00099D79 /* JwCateImageHolder.m in Sources */,
+				C8B603DB25A46F090015F4E5 /* JwDataService.m in Sources */,
 				C8517AF0259DB46D00B6BC66 /* JwShareHelper.m in Sources */,
 				C8517AF2259DB46D00B6BC66 /* JwAuthHelper.m in Sources */,
 				C8517B1825A439AE00B6BC66 /* JwProjectModel.m in Sources */,
@@ -778,14 +819,15 @@
 				C8517AFA25A4375000B6BC66 /* JwLocalCenter.m in Sources */,
 				C8517AB2259DA91E00B6BC66 /* JwRecordTool.m in Sources */,
 				C8517AE2259DB44700B6BC66 /* JwMenuViewCell.m in Sources */,
-				C86BE13A25884B6B00D3AA3E /* SceneDelegate.m in Sources */,
 				C8517AE6259DB44700B6BC66 /* JwMenuItem.m in Sources */,
 				C8CD0DC32595C82C00A0D3D0 /* JwCateUtilities.m in Sources */,
 				C8517AC8259DAA3900B6BC66 /* JwCarouselView.m in Sources */,
 				C8517AE3259DB44700B6BC66 /* JwMenuViewController.m in Sources */,
 				C8CD0D3325949B6900A0D3D0 /* UIButton+JwCate.m in Sources */,
+				C8B603D325A46E800015F4E5 /* JwHomeController.m in Sources */,
 				C8517AF1259DB46D00B6BC66 /* JwShareModel.m in Sources */,
 				C8517B4025A43BD500B6BC66 /* JwRootViewController.m in Sources */,
+				C8B603D225A46E800015F4E5 /* JwClassifyModel.m in Sources */,
 				C87056B5259B03B400099D79 /* UITextField+JwCate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,14 +835,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C86BE13E25884B6B00D3AA3E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C86BE13F25884B6B00D3AA3E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C86BE14325884B6E00D3AA3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

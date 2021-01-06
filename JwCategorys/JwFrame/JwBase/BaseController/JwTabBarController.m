@@ -13,11 +13,8 @@
 @interface JwTabBarController ()<UITabBarControllerDelegate>
 
 @property (nonatomic, strong) JwNavigationController *homeNC;
-@property (nonatomic, strong) JwNavigationController *lifeNC;
-@property (nonatomic, strong) JwNavigationController *zhengwuNC;
 @property (nonatomic, strong) JwNavigationController *myNC;
 
-@property (nonatomic, strong) JwNavigationController *scmNC;
 
 @end
 

@@ -26,20 +26,15 @@
 - (NSMutableDictionary *)defaultParam:(NSDictionary *)param{
     NSMutableDictionary *defaultParam = [NSMutableDictionary dictionaryWithDictionary:param];
     
-    defaultParam[@"appKey"] = kServiceAppKey;
+    //defaultParam[@"appKey"] = kServiceAppKey;
+    
     defaultParam[@"os"] = @"iOS";
     defaultParam[@"osVersion"] = [JwCommon jw_commonSystemVersionString];
-    
-    NSString *appVersion = [JwCommon jw_commonVersionString];
-    //测试版本
-    if ([kServiceBaseURL isEqualToString:@"https://tapi-sip.510gow.com/"]) {
-        appVersion = [NSString stringWithFormat:@"%@-beta", appVersion];
-    }
-    
-    defaultParam[@"appVersion"] = appVersion;
+    defaultParam[@"appVersion"] = [JwCommon jw_commonVersionString];
     defaultParam[@"devid"] = [JwUUID jw_uuidDeviceString];
     defaultParam[@"osBrand"] = [JwiPhoneType jw_iPhoneType];
     defaultParam[@"timestamp"] = [JwCommon jw_commonTimestampString];
+    
     //用户
     /**
      if (![JwCommon jw_isBlankWithString:[JwLocalCenter shared].sessionid]) {
