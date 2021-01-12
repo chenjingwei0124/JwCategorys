@@ -45,8 +45,8 @@
 - (void)setupView{
     
     self.homeNC = [self navigationWithRootViewController:[[JwHomeController alloc] init]
-                                   tabBarItemImageString:@"tab_zixun"
-                           tabBarItemSelectedImageString:@"tab_zixuned"
+                                   tabBarItemImageString:@"tab_home"
+                           tabBarItemSelectedImageString:@"tab_homeed"
                                                    title:@"资讯"];
     
     self.myNC = [self navigationWithRootViewController:[[JwHomeController alloc] init]
