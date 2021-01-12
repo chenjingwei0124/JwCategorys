@@ -19,9 +19,9 @@
 
 
 //appKey
-#define kServiceAppKey @"5fb39a50c59a9"
+#define kServiceAppKey @""
 //appSecret
-#define kServiceAppSecret @"8d68a9777b8b7115364452c712837616"
+#define kServiceAppSecret @""
 
 
 typedef NS_ENUM(NSUInteger, Jw_HttpCode) {
