@@ -8,12 +8,14 @@
 
 #import "JwTabBarController.h"
 #import "JwNavigationController.h"
+
 #import "JwHomeController.h"
+#import "JwMyController.h"
 
 @interface JwTabBarController ()<UITabBarControllerDelegate>
 
-@property (nonatomic, strong) JwNavigationController *homeNC;
 @property (nonatomic, strong) JwNavigationController *myNC;
+@property (nonatomic, strong) JwNavigationController *homeNC;
 
 
 @end
@@ -44,16 +46,14 @@
 
 - (void)setupView{
     
+    self.myNC = [self navigationWithRootViewController:[[JwMyController alloc] init]
+                                 tabBarItemImageString:@"tab_me"
+                         tabBarItemSelectedImageString:@"tab_meed"
+                                                 title:@"我的"];
     self.homeNC = [self navigationWithRootViewController:[[JwHomeController alloc] init]
                                    tabBarItemImageString:@"tab_home"
                            tabBarItemSelectedImageString:@"tab_homeed"
                                                    title:@"资讯"];
-    
-    self.myNC = [self navigationWithRootViewController:[[JwHomeController alloc] init]
-                                 tabBarItemImageString:@"tab_me"
-                         tabBarItemSelectedImageString:@"tab_meed"
-                                                 title:@"我的"];
-    
     self.delegate = self;
     self.tabBar.translucent = NO;
     self.tabBar.tintColor = kJwColorHexString(@"#F54343");
@@ -64,7 +64,7 @@
     if (@available(iOS 10.0, *)) {
         self.tabBar.unselectedItemTintColor = kJwColorHexString(@"999999");
     }
-    self.viewControllers = @[self.homeNC, self.myNC];
+    self.viewControllers = @[self.myNC, self.homeNC];
     //self.selectedIndex = 3;
 }
 

@@ -37,8 +37,8 @@
     
     //加密
     NSMutableDictionary *signParam = [[[JwBaseService alloc] init] signParam:params];
-    
     point = [self basePathWithPoint:point];
+    
     [self GET:signParam url:point success:^(id data) {
         //此处可数据处理
         success(data);
@@ -50,8 +50,8 @@
 - (void)POST:(NSDictionary *)params point:(NSString *)point success:(void (^)(id data))success failure:(void (^)(NSError * error))failure{
     //加密
     NSMutableDictionary *signParam = [[[JwBaseService alloc] init] signParam:params];
-    
     point = [self basePathWithPoint:point];
+    
     [self POST:signParam url:point success:^(id data) {
         //此处可数据处理
         success(data);
@@ -63,8 +63,8 @@
 - (void)upload:(NSDictionary *)params point:(NSString *)point imageDictionary:(NSDictionary *)imageDictionary success:(void(^)(id data))success failure:(void(^)(NSError *error))failure{
     //加密
     NSMutableDictionary *signParam = [[[JwBaseService alloc] init] signParam:params];
-    
     point = [self basePathWithPoint:point];
+    
     [self upload:signParam url:point imageDictionary:imageDictionary success:^(id data) {
         //此处可数据处理
         success(data);

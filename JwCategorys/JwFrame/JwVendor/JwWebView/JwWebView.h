@@ -11,14 +11,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol JwWebViewDelegate <NSObject>
+
+@optional
+//代理返回js调用OC
+- (void)webViewReceiveScriptMessage:(WKScriptMessage *)message;
+
+@end
+
 @interface JwWebView : UIView
 
 @property (nonatomic, strong) WKWebView *webView;
 
+//block返回title
 @property (nonatomic, copy) void(^didObservePathTitle)(NSString *title);
-
-//写入js
-@property (nonatomic, strong) NSString *js;
+//代理
+@property (nonatomic, weak) id<JwWebViewDelegate> delegate;
 
 @end
 

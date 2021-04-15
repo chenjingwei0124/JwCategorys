@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import "JwMacro.h"
 #import "UIView+JwCate.h"
-#import "JwTabBarController.h"
+#import "JwRootViewController.h"
 #import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
@@ -21,7 +21,7 @@
 - (void)showRootController{
     [self.window.rootViewController removeFromParentViewController];
     [self.window jw_removeAllSubviews];
-    self.window.rootViewController = [[JwTabBarController alloc] init];
+    self.window.rootViewController = [JwRootViewController root];
 }
 
 /** 键盘高度计算以及BarTool */

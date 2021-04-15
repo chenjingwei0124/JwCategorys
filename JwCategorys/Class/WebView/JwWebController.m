@@ -1,54 +1,49 @@
 //
-//  JwWebView.m
-//  JwPart
+//  JwWebController.m
+//  JwCompose
 //
-//  Created by 陈警卫 on 2020/6/5.
-//  Copyright © 2020 陈警卫. All rights reserved.
+//  Created by 陈警卫 on 2019/12/12.
+//  Copyright © 2019 陈警卫. All rights reserved.
 //
 
-#import "JwWebView.h"
-#import "JwMacro.h"
-#import "UIColor+JwCate.h"
-#import "UIView+JwCate.h"
+#import "JwWebController.h"
+#import <WebKit/WebKit.h>
 #import "JwWeakScriptMessageDelegate.h"
+#import <LBXAlertAction.h>
 
-@interface JwWebView ()<WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate>
 
-@property (nonatomic, strong) UIProgressView *progressView;
+@interface JwWebController ()<WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate>
+
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
-@implementation JwWebView
+@implementation JwWebController
 
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setupView];
-    }
-    return self;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.title = @"WKWebView";
+    [self setupView];
+    
 }
 
 - (void)setupView{
-    [self addSubview:self.webView];
-    [self addSubview:self.progressView];
+    [self.view addSubview:self.webView];
     
-    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-    [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"OCJS" style:(UIBarButtonItemStylePlain) target:self action:@selector(OCJSAction)];
 }
 
 - (void)dealloc{
-    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
-    [self.webView removeObserver:self forKeyPath:@"title"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"iOSJS"];
 }
 
-
-- (UIProgressView *)progressView{
-    if (!_progressView) {
-        _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, self.jw_width, 0)];
-        _progressView.tintColor = kJwColorHexString(@"#F54343");
-        _progressView.trackTintColor = [UIColor groupTableViewBackgroundColor];
-    }
-    return _progressView;
+- (void)OCJSAction{
+    NSString *jsString = [NSString stringWithFormat:@"changeColor()"];
+    [_webView evaluateJavaScript:jsString completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        DLog(@"改变div的背景色");
+    }];
 }
 
 - (WKWebView *)webView{
@@ -74,11 +69,14 @@
         [wkUC addScriptMessageHandler:weakDelegate name:@"iOSJS"];
         config.userContentController = wkUC;
         
-        _webView = [[WKWebView alloc] initWithFrame:(CGRectMake(0, 0, self.jw_width, self.jw_height)) configuration:config];
+        _webView = [[WKWebView alloc] initWithFrame:(CGRectMake(0, kJwScreenNavBatBarHeight, self.view.jw_width, self.view.jw_height - kJwScreenNavBatBarHeight)) configuration:config];
         _webView.UIDelegate = self;
         _webView.navigationDelegate = self;
         _webView.allowsBackForwardNavigationGestures = YES;
         
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"JSOC" ofType:@"html"];
+        NSString *htmlString = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        [_webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     }
     return  _webView;
 }
@@ -87,11 +85,11 @@
 
 //通过接收JS传出消息的name进行捕捉的回调方法
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    DLog(@"name:%@ body:%@ frameInfo:%@",message.name, message.body, message.frameInfo);
+    DLog(@"name:%@ body:%@ frameInfo:%@",message.name,message.body,message.frameInfo);
     
-    if (_delegate && [_delegate respondsToSelector:@selector(webViewReceiveScriptMessage:)]) {
-        [_delegate webViewReceiveScriptMessage:message];
-    }
+    NSString *param = [NSString stringWithFormat:@"name:%@\nbody:%@", message.name, message.body];
+    [LBXAlertAction showAlertWithTitle:@"JS调用OC" msg:param buttonsStatement:@[@"确定"] chooseBlock:^(NSInteger buttonIdx) {
+    }];
 }
 
 //WKNavigationDelegate
@@ -130,6 +128,14 @@
 //页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     
+    NSString *jsString = [NSString stringWithFormat:@"{ \"appKey\" : \"6009181140\", \"message\" : \"1uayRy8i7uS9eczC+z5jJBgjdwbUQTMfEovDeRvYKW0ICne6sZ1bkvmUWKf1wWDEaJT0vED3aJDYAxq2Qb4XJkB4DmOzzfL9pcBUT3cr1bOHVG6ran4rRQA9Mm/nALNC\"}"];
+    
+    NSString *funString = [NSString stringWithFormat:@"window.setParam('%@')", jsString];
+    
+    [_webView evaluateJavaScript:funString completionHandler:^(id _Nullable data, NSError * _Nullable error) {
+        DLog(@"改变div的背景色");
+    }];
+    
 }
 
 //页面加载失败时调用
@@ -150,6 +156,9 @@
 //警告框 alert
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     
+    [LBXAlertAction showAlertWithTitle:@"警告框" msg:message buttonsStatement:@[@"确定"] chooseBlock:^(NSInteger buttonIdx) {
+        completionHandler();
+    }];
 }
 
 //确认框 confirm
@@ -163,38 +172,13 @@
 }
 
 
-#pragma mark - kvo
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-
-    if (object == self.webView && [keyPath isEqualToString:@"estimatedProgress"]) {
-        CGFloat progress = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];
-        self.progressView.progress = progress;
-        if (progress >= 1.0) {
-            //添加动画 进度条隐藏更自然
-            [UIView animateWithDuration:0.3
-                                  delay:0.3
-                                options:UIViewAnimationOptionCurveEaseOut
-                             animations:^{
-                self.progressView.alpha = 0;
-            } completion:nil];
-        }
-    }else if (object == self.webView && [keyPath isEqualToString:@"title"]){
-        if (self.didObservePathTitle) {
-            self.didObservePathTitle(self.webView.title);
-        }
-    }
-    else{
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
-}
-
-
-
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 */
 

@@ -36,6 +36,7 @@ PODS:
   - LBXScan/Types (2.5.1)
   - LBXScan/UI (2.5.1):
     - LBXScan/Types (~> 2.2)
+  - LBXZBarSDK (1.3.5)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.2.2)
@@ -58,6 +59,9 @@ PODS:
     - MOBFoundation
   - MOBFoundation (3.2.22)
   - "NSDate+TimeAgo (1.0.6)"
+  - OpenSSL-Universal (1.0.2.20):
+    - OpenSSL-Universal/Static (= 1.0.2.20)
+  - OpenSSL-Universal/Static (1.0.2.20)
   - pop (1.0.12)
   - PPGetAddressBook (0.2.8)
   - SAMKeychain (1.5.3)
@@ -105,6 +109,7 @@ DEPENDENCIES:
   - LBXScan/LBXNative
   - LBXScan/LBXZXing
   - LBXScan/UI
+  - LBXZBarSDK
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -115,6 +120,7 @@ DEPENDENCIES:
   - mob_sharesdk/ShareSDKUI
   - mob_smssdk
   - "NSDate+TimeAgo"
+  - OpenSSL-Universal (~> 1.0.2.10)
   - pop
   - PPGetAddressBook
   - SAMKeychain
@@ -148,6 +154,7 @@ SPEC REPOS:
     - JSONModel
     - LBXAlertAction
     - LBXScan
+    - LBXZBarSDK
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -156,6 +163,7 @@ SPEC REPOS:
     - mob_smssdk
     - MOBFoundation
     - "NSDate+TimeAgo"
+    - OpenSSL-Universal
     - pop
     - PPGetAddressBook
     - SAMKeychain
@@ -189,6 +197,7 @@ SPEC CHECKSUMS:
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   LBXAlertAction: d55188a2debb2bdd88b8d102c1c5552151c9014d
   LBXScan: 90ca10d0c38fb4a5a6980d7782354f3f69f50093
+  LBXZBarSDK: db826d1265fbb4fbdbb2f30d7d1e96142e32bfff
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
@@ -197,6 +206,7 @@ SPEC CHECKSUMS:
   mob_smssdk: bd7493aa6f21e12b8daed8935c32c69552907d14
   MOBFoundation: 2ec8fed6a4a6ed5c1f0a071850fd42c611d2780c
   "NSDate+TimeAgo": 35601c619b2d59290055e4fe76e61d97677a2360
+  OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   PPGetAddressBook: e4b6b0a87e852df5d5b90c44ecd9ded7f6f1ccf6
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
@@ -216,6 +226,6 @@ SPEC CHECKSUMS:
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 6696b618f0c4af91b72ecd4dbaadedccb749b42b
+PODFILE CHECKSUM: 739aeba3fcbbe90a3beb672f4b59424c4fdd841f
 
 COCOAPODS: 1.10.0

@@ -7,7 +7,6 @@
 //
 
 #import "JwClassifyCell.h"
-#import <Masonry.h>
 
 @interface JwClassifyCell ()
 

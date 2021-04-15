@@ -46,7 +46,7 @@ pod 'LBXAlertAction'
 pod 'LBXScan/LBXNative'
 pod 'LBXScan/LBXZXing'
 pod 'LBXScan/UI'
-#pod 'LBXScan/LBXZBar'
+pod 'LBXZBarSDK'
 
 pod 'YYModel'
 pod 'YYCache'
@@ -62,6 +62,7 @@ pod 'YYCategories'
 pod 'NSDate+TimeAgo'
 
 pod 'pop'
+pod 'OpenSSL-Universal', '~> 1.0.2.10'
 
 #极光推送
 pod 'JPush'

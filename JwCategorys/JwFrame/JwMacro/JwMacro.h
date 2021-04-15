@@ -66,10 +66,6 @@ isiPhoneBangs = [[UIApplication sharedApplication] delegate].window.safeAreaInse
 /** 底栏和tab菜单栏高度 */
 #define kJwScreenTabBottomBarHeight (kJwScreenBottomHeight + kJwScreenTabBarHeight)
 
-
-/** AppDelegate */
-#define kJwAppDelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
-
 /** WeakObj */
 #define kJwWeak(name) __weak __typeof(name) w##name = name
 /** StrongObj */
@@ -103,6 +99,24 @@ instance = [[self alloc] init]; \
 return instance; \
 }
 
+#pragma mark - 方法
+/**
+ 宏定义方法使用前记得引用对应的头文件
+ */
+
+/** AppDelegate */
+#define kJwAppDelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+/** window的 根控制器 JwRootController */
+#define kJwRootNavigationVC ((JwRootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController])
+/** JwRootController 根控制器 JwTabBarController */
+#define kJwRootTabBarVC (JwTabBarController *)(((JwRootViewController *)kJwRootNavigationVC).viewControllers[0])
+/** tabbarVC的 选择控制器 JwNavigationController */
+#define kJwCurrentNavigationVC (JwNavigationController *)(((JwTabBarController *)kJwRootTabBarVC).selectedViewController)
+
+
+/** 转化成字符串 */
+#define kJwCheckToString(s) [JwCommon jw_stringCheckWithData:s]
 
 
 #endif /* JwMacro_h */
