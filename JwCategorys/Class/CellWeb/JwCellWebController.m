@@ -50,7 +50,7 @@
     [self.datas addObject:model1];
     
     JwCellWebModel *model2 = [[JwCellWebModel alloc] init];
-    model2.url = @"https://www.bilibili.com/";;
+    model2.url = @"https://www.bilibili.com/";
     [self.datas addObject:model2];
     
     
